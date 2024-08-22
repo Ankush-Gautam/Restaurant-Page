@@ -5,7 +5,7 @@
 }
 
 body {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   padding: 1rem;
@@ -21,52 +21,53 @@ body {
   color: white;
 }
 
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-btns {
+  margin-left: auto;
+}
+
+.nav-btns button {
+  margin-right: 2rem;
+}
+
 button {
-  padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
   border: none;
+  color: gray;
+  font-weight: 600;
   border-radius: 0.2rem;
-  background: linear-gradient(
-    65deg,
-    rgb(98, 98, 255),
-    rgb(124, 124, 255),
-    rgb(86, 86, 255)
-  );
-  color: white;
+  background: transparent;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-  opacity: 0.9;
-}
-
-button:active {
-  scale: 0.98;
+  opacity: 0.8;
 }
 
 #mode-toggle {
   background-image: url('assets/theme-light-dark.svg');
-  background-color: rgb(74, 119, 255);
   background-size: contain;
   background-repeat: no-repeat;
-  padding: 1rem;
-  position: fixed;
-  right: 0.7rem;
-  top: 1rem;
+  padding: 0.8rem;
 }
 
 h2 {
   display: inline-block;
   margin: 3rem 0;
-  font-size: 3rem;
+  font-size: 4rem;
   border-bottom: 2px solid tomato;
 }
 
+.sub-header {
+  margin-top: 5rem;
+}
+
 p {
-  background-color: rgb(175, 157, 255);
-  padding: 2rem 0;
   font-size: 1.1rem;
 }
 
@@ -74,7 +75,60 @@ li {
   list-style: none;
 }
 
+table {
+  width: 50%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th,
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+th {
+  background-color: #0a0a0a91;
+}
+
+#content {
+  padding-top: 3rem;
+}
+
 #hero-section {
-  margin: 3rem auto;
-  height: 500px;
+  height: 600px;
+}
+
+.page-logo {
+  text-shadow: 0px 0px 10px rgba(197, 197, 197, 0.425);
+  font-size: 1.5rem;
+  background: linear-gradient(
+    65deg,
+    rgb(204, 63, 63),
+    rgb(247, 92, 53),
+    rgb(231, 89, 89),
+    rgb(250, 108, 72)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  height: 350px;
+  width: 350px;
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
+  text-shadow: 0px 0px 10px rgb(14, 14, 20);
+  margin: 1rem;
+  border-radius: 0.4rem;
+}
+
+span {
+  background-color: rgba(0, 0, 0, 0.479);
+  padding: 0.2rem;
+  border-radius: 0.3rem;
 }

@@ -1,21 +1,22 @@
 import './styles.css';
-import { loadInitialContent } from './home';
+import { home } from './home';
 import { menu } from './menu';
 import { about } from './about';
 
-//home page by default
-loadInitialContent();
+// Load the home page by default
+home();
 
-const navButtons = document.querySelectorAll('#nav button');
+const navButtons = document.querySelectorAll('.nav-btns');
 navButtons.forEach((btn) => {
   btn.addEventListener('click', (event) => {
-    console.log(event.target.id);
-    if (event.target.id == 'menu') {
+    const selectedPage = event.target.id;
+
+    if (selectedPage == 'menu') {
       menu();
-    } else if (event.target.id == 'about') {
+    } else if (selectedPage == 'about') {
       about();
     } else {
-      loadInitialContent();
+      home();
     }
   });
 });
@@ -24,7 +25,7 @@ const toggleDarkMode = () => {
   const toggleBtn = document.querySelector('#mode-toggle');
   const bodyElement = document.body;
 
-  toggleBtn.addEventListener('click', () => {
+  toggleBtn.addEventListener('click', (event) => {
     bodyElement.classList.toggle('dark-mode');
     bodyElement.classList.toggle('light-mode');
   });
