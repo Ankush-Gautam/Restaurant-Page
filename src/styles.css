@@ -8,8 +8,17 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
-  padding: 1rem 0;
-  text-align: center;
+  padding: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.light-mode {
+  background-color: aliceblue;
+}
+
+.dark-mode {
+  background-color: rgb(11, 11, 15);
+  color: white;
 }
 
 button {
@@ -37,6 +46,17 @@ button:active {
   scale: 0.98;
 }
 
+#mode-toggle {
+  background-image: url('assets/theme-light-dark.svg');
+  background-color: rgb(74, 119, 255);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 1rem;
+  position: fixed;
+  right: 0.7rem;
+  top: 1rem;
+}
+
 h2 {
   display: inline-block;
   margin: 3rem 0;
@@ -45,7 +65,16 @@ h2 {
 }
 
 p {
-  background-color: lightblue;
+  background-color: rgb(175, 157, 255);
   padding: 2rem 0;
   font-size: 1.1rem;
+}
+
+li {
+  list-style: none;
+}
+
+#hero-section {
+  margin: 3rem auto;
+  height: 500px;
 }

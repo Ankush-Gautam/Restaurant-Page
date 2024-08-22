@@ -19,3 +19,17 @@ navButtons.forEach((btn) => {
     }
   });
 });
+
+const toggleDarkMode = () => {
+  const toggleBtn = document.querySelector('#mode-toggle');
+  const bodyElement = document.body;
+
+  toggleBtn.addEventListener('click', () => {
+    bodyElement.classList.toggle('dark-mode');
+    bodyElement.classList.toggle('light-mode');
+  });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  toggleDarkMode();
+});
