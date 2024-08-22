@@ -1,2 +1,2 @@
 # Restaurant-Page
-A site for restaurant business.
+A dynamically created website completely through js and webpack.
